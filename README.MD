@@ -21,16 +21,19 @@ Hi, I am Gustavo & today we will learn:
    sudo /usr/sbin/alternatives --config java
 
 **Step 4** : Download latest Jenkins code package
-   sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenk...
+   sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
 
 **Step 5** : Import a key file from Jenkins-CI to enable installation from the package
-   sudo rpm --import http://pkg.jenkins-ci.org/redhat/jenk...
+   sudo rpm --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
 
 **Step 6** : Install Jenkins
    sudo yum install jenkins
 
 **Step 7** : Start jenkins
    sudo service jenkins start
+**step 8** : add port 8080 to instance security group to be able to reach from external request    
 
-**Step 8** : Access Jenkins server using the public DNS of your ec2 on port 8080
- 
+**Step 9** : Access Jenkins server using the public DNS of your ec2 on port 8080
+    http://{ec2-public-dns}:8080
+     http://{publicIP}:8080
+
